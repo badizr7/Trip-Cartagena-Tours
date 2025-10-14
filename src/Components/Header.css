@@ -1,0 +1,120 @@
+/* 🧭 Header con Navbar centrado */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  z-index: 10;
+  background: transparent;
+  transition: background-color 0.4s ease, padding 0.3s ease;
+}
+
+.header.scrolled {
+  position: fixed;              /* Fija cuando baja */
+  background-color: rgba(0, 0, 0, 0.6); /* Color de fondo al hacer scroll */
+  padding: 1rem 3rem;          /* Se reduce el padding */
+  backdrop-filter: blur(8px);  /* Efecto glass moderno */
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeDown 1s ease forwards;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #00b4d8;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #90e0ef;
+}
+
+.navbar .logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-10%);
+  animation: fadeInRight 1s ease 0.5s forwards;
+  opacity: 0;
+}
+
+.navbar .logo img {
+  width: 45px;
+  height: 45px;
+}
+
+/* Animaciones */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar .logo {
+    position: static;
+    transform: none;
+    animation-delay: 0s;
+  }
+}
