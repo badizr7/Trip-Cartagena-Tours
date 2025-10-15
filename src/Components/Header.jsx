@@ -1,24 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Header.css";
 
 const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header className="header">
       <nav className="navbar">
         <ul>
           <li><a href="#">Inicio</a></li>

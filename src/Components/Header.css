@@ -12,7 +12,7 @@
 
 .header.scrolled {
   position: fixed;              /* Fija cuando baja */
-  background-color: rgba(0, 0, 0, 0.6); /* Color de fondo al hacer scroll */
+  background-color: rgba(0, 0, 0, 0.); /* Color de fondo al hacer scroll */
   padding: 1rem 3rem;          /* Se reduce el padding */
   backdrop-filter: blur(8px);  /* Efecto glass moderno */
 }
@@ -28,7 +28,7 @@
 
 .navbar ul {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -38,6 +38,7 @@
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.30rem;
   letter-spacing: 0.5px;
   position: relative;
   padding-bottom: 5px;
@@ -54,6 +55,7 @@
   background: #00b4d8;
   transition: width 0.3s ease;
 }
+
 
 .navbar a:hover::after {
   width: 100%;
