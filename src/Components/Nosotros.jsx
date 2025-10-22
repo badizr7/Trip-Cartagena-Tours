@@ -4,7 +4,7 @@ import "./Nosotros.css";
 
 const Nosotros = () => {
   return (
-    <section className="nosotros-section">
+    <section id="nosotros" className="nosotros-section">
       <div className="nosotros-container">
         {/* Encabezado */}
         <div className="nosotros-header">

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import video from "../assets/hero-video.mp4";
+import video from "../assets/hero-video2.mp4";
 
 const Hero = () => {
   const scrollToContent = () => {
@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero-section">
+    <section id="inicio" className="hero-section">
       {/* Video de fondo */}
       <video className="hero-video" autoPlay loop muted>
         <source src={video} type="video/mp4" />
@@ -30,7 +30,7 @@ const Hero = () => {
         </p>
         <div className="hero-buttons">
           <button className="btn-transparent">Elegir Tour</button>
-          <button className="btn-solid">Contactar por Whatsapp</button>
+          <button className="btn-solid">Contactar por Whatsapp📱</button>
         </div>
       </div>
 

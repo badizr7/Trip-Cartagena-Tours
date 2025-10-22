@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Paquetes } from "../data/Paquetes";
 import "./Paquetes.css";
 
 const PaquetesSection = () => {
   const [hoveredId, setHoveredId] = useState(null);
   const [currentIndexes, setCurrentIndexes] = useState({});
+  const navigate = useNavigate(); // ✅ Hook para navegar entre rutas
 
   useEffect(() => {
     if (hoveredId === null) return;
 
-    const images = Paquetes.find(p => p.id === hoveredId).images;
+    const images = Paquetes.find((p) => p.id === hoveredId).images;
     const interval = setInterval(() => {
-      setCurrentIndexes(prev => ({
+      setCurrentIndexes((prev) => ({
         ...prev,
-        [hoveredId]: (prev[hoveredId] + 1) % images.length
+        [hoveredId]: (prev[hoveredId] + 1) % images.length,
       }));
-    }, 1200); 
+    }, 1200);
 
     return () => clearInterval(interval);
   }, [hoveredId]);
 
+  const handleVerDetalles = (id) => {
+    navigate(`/paquete/${id}`); // ✅ Navega a la página de detalles
+  };
+
   return (
-    <section className="paquetes-section">
+    <section id="paquetes" className="paquetes-section">
       <h2 className="paquetes-title">Descubre Nuestros Paquetes Turísticos</h2>
       <div className="paquetes-grid">
         {Paquetes.map((p) => {
@@ -32,7 +38,7 @@ const PaquetesSection = () => {
               className="paquete-card"
               onMouseEnter={() => {
                 setHoveredId(p.id);
-                setCurrentIndexes(prev => ({ ...prev, [p.id]: 0 }));
+                setCurrentIndexes((prev) => ({ ...prev, [p.id]: 0 }));
               }}
               onMouseLeave={() => setHoveredId(null)}
             >
@@ -43,7 +49,7 @@ const PaquetesSection = () => {
                     className="paquete-img-fade"
                     style={{
                       backgroundImage: `url(${img})`,
-                      opacity: idx === currentIndex ? 1 : 0
+                      opacity: idx === currentIndex ? 1 : 0,
                     }}
                   ></div>
                 ))}
@@ -55,7 +61,12 @@ const PaquetesSection = () => {
                   <span className="paquete-precio">
                     ${p.price} <small>/persona</small>
                   </span>
-                  <button className="paquete-btn">Ver Detalles →</button>
+                  <button
+                    className="paquete-btn"
+                    onClick={() => handleVerDetalles(p.id)} // ✅ Ir al detalle
+                  >
+                    Ver Detalles →
+                  </button>
                 </div>
               </div>
             </div>
