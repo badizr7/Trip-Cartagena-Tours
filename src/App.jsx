@@ -8,7 +8,8 @@ import Contacto from "./Components/Contacto";
 import Footer from "./Components/Footer";
 import WhatsAppButton from "./Components/WhatsAppButton";
 import PaqueteDetalles from "./Components/PaqueteDetalles";
-import ScrollToTop from "./Components/ScrollToTop"; // 👈 nuevo import
+import ScrollToTop from "./Components/ScrollToTop";
+import Testimonios from "./Components/Testimonios";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <Nosotros />
       <Paquetes />
+      <Testimonios />
       <Contacto />
     </>
   );

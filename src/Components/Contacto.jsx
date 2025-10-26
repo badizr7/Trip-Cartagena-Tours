@@ -83,7 +83,7 @@ const Contacto = () => {
               </div>
               <div className="info-text">
                 <h3>Email</h3>
-                <p>info@jeeptours.com</p>
+                <p>info@tripcartagenatours.com</p>
                 <p className="info-detail">Respuesta en 24 horas</p>
               </div>
             </div>

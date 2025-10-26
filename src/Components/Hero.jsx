@@ -1,12 +1,13 @@
 import React from "react";
 import "./Hero.css";
 import video from "../assets/hero-video2.mp4";
+import { Instagram, Facebook, Youtube, Music2 } from "lucide-react";
 
 const Hero = () => {
   const scrollToContent = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -18,20 +19,54 @@ const Hero = () => {
         Tu navegador no soporta la reproducción de video.
       </video>
 
-      {/* Contenido encima del video */}
+      {/* Contenido principal */}
       <div className="hero-content">
         <h1>
-          JEEP TOURS<br />POR LAS MONTAÑAS
+          DESCUBRE EL PARAISO DEL CARIBE COLOMBIANO <br />
         </h1>
         <h3>Desde Cartagena hacia destinos inolvidables</h3>
-        <p>
-          Descubre la naturaleza como nunca antes: explora montañas majestuosas, caminos escondidos y paisajes únicos.
-          Nuestros recorridos en jeep te ofrecen una experiencia inolvidable llena de aventura y conexión con la naturaleza.
-        </p>
+        <p>Vive experiencias inolvidables en las islas más hermosas de Cartagena.</p>
+
         <div className="hero-buttons">
           <button className="btn-transparent">Elegir Tour</button>
           <button className="btn-solid">Contactar por Whatsapp📱</button>
         </div>
+      </div>
+
+      {/* Redes sociales */}
+      <div className="hero-socials">
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn instagram"
+        >
+          <Instagram size={20} />
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn facebook"
+        >
+          <Facebook size={20} />
+        </a>
+        <a
+          href="https://www.tiktok.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn tiktok"
+        >
+          <Music2 size={20} />
+        </a>
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-btn youtube"
+        >
+          <Youtube size={20} />
+        </a>
       </div>
 
       {/* Indicador de scroll */}

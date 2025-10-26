@@ -8,9 +8,9 @@ const Nosotros = () => {
       <div className="nosotros-container">
         {/* Encabezado */}
         <div className="nosotros-header">
-          <h2 className="nosotros-title">Conoce Nuestra Historia</h2>
+          <h2 className="nosotros-title">Sobre Nosotros</h2>
           <p className="nosotros-subtitle">
-            Más de 10 años creando experiencias inolvidables en las montañas de Colombia
+            Más de 10 años creando experiencias inolvidables en la hermosa ciudad de Cartagena
           </p>
         </div>
 
@@ -34,19 +34,19 @@ const Nosotros = () => {
             <div className="polaroid-grid">
               <div className="polaroid polaroid-1">
                 <img
-                  src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/12470921/pexels-photo-12470921.jpeg"
                   alt="Montañas de Colombia"
                 />
               </div>
               <div className="polaroid polaroid-2">
                 <img
-                  src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/32512765/pexels-photo-32512765.jpeg"
                   alt="Aventura en Jeep"
                 />
               </div>
               <div className="polaroid polaroid-3">
                 <img
-                  src="https://images.pexels.com/photos/457878/pexels-photo-457878.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/26600364/pexels-photo-26600364.jpeg"
                   alt="Naturaleza colombiana"
                 />
               </div>

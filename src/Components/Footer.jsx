@@ -119,7 +119,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2025 JeepTours Colombia. Todos los derechos reservados.
+            © 2025 Trip Cartagena Tours. Todos los derechos reservados.
           </p>
           <div className="footer-legal">
             <a href="#">Términos y Condiciones</a>

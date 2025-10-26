@@ -38,6 +38,16 @@ const Header = () => {
           </li>
           <li>
             <Link
+              to="testimonios"
+              smooth={true}
+              duration={600}
+              offset={-70}
+            >
+              Testimonios
+            </Link>
+          </li>
+          <li>
+            <Link
               to="contacto"
               smooth={true}
               duration={600}
@@ -46,6 +56,7 @@ const Header = () => {
               Contacto
             </Link>
           </li>
+          
         </ul>
       </nav>
     </header>

@@ -140,6 +140,57 @@
   animation: scrollDot 2s infinite;
 }
 
+/* --- Redes sociales --- */
+.hero-socials {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 3;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Colores al pasar el mouse */
+.social-btn.instagram:hover {
+  color: #e1306c;
+}
+
+.social-btn.facebook:hover {
+  color: #1877f2;
+}
+
+.social-btn.tiktok:hover {
+  color: #000;
+  background: #fff;
+}
+
+.social-btn.youtube:hover {
+  color: #ff0000;
+}
+
+
+
+
 /* Animaciones */
 @keyframes fadeUp {
   0% {
@@ -187,6 +238,32 @@
   }
 }
 
+/* Animación de entrada suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cada icono entra con leve retardo */
+.hero-socials .social-btn:nth-child(1) {
+  animation: fadeInUp 1s ease forwards 0.2s;
+}
+.hero-socials .social-btn:nth-child(2) {
+  animation: fadeInUp 1s ease forwards 0.4s;
+}
+.hero-socials .social-btn:nth-child(3) {
+  animation: fadeInUp 1s ease forwards 0.6s;
+}
+.hero-socials .social-btn:nth-child(4) {
+  animation: fadeInUp 1s ease forwards 0.8s;
+}
+
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -204,5 +281,21 @@
   .scroll-arrow {
     width: 25px;
     height: 40px;
+  }
+}
+
+/* --- Responsivo --- */
+@media (max-width: 768px) {
+  .hero-socials {
+    flex-direction: row;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
 }
